@@ -1,0 +1,9 @@
+/target/*
+/data/*
+/artifacts
+/project/project
+/project/target
+/*.ipr
+/*.iws
+/*.iml
+/.idea/

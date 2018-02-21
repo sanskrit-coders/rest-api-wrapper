@@ -6,9 +6,6 @@ name := "rest-api-wrapper"
 
 scalaVersion := "2.12.3"
 
-val akkaVersion = "2.5.4"
-val akkaHttpVersion = "10.0.10"
-
 resolvers += Resolver.sonatypeRepo("releases")
 resolvers += Resolver.sonatypeRepo("snapshots")
 
@@ -17,13 +14,12 @@ libraryDependencies ++= Seq(
   ,"ch.qos.logback" % "logback-core" % "0.9.29"
 
   // JSON processing.
-  ,"de.heikoseeberger" %% "akka-http-json4s" % "1.19.0-M2"
+//  ,"de.heikoseeberger" %% "akka-http-json4s" % "1.19.0-M2"
   ,"org.json4s" % "json4s-native_2.12" % "3.5.3"
 
+  ,"com.github.sanskrit-coders" % "scala-utils_2.12" % "0.5"
   ,"com.github.sanskrit-coders" % "indic-transliteration_2.12" % "1.29"
   ,"com.github.sanskrit-coders" % "db-interface_2.12" % "3.1"
-
-  ,"com.typesafe.akka" %% "akka-http-core" % akkaHttpVersion  // The Akka HTTP client.
 
 )
 

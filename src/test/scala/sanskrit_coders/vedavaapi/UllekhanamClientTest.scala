@@ -10,9 +10,14 @@ class UllekhanamClientTest  extends FlatSpec {
   private val log: Logger = LoggerFactory.getLogger(this.getClass)
   private val client = new UllekhanamClient()
   "callApi" should "work with listBooks API" in {
-    val resultFuture = client.callApi(uri = "http://api.vedavaapi.org/py/ullekhanam/v1/dbs/ullekhanam_test/books")
+    val resultFuture = client.callApi(uriSuffix = "http://api.vedavaapi.org/py/ullekhanam/v1/dbs/ullekhanam_test/books")
     resultFuture.map(responseString => {
         log.debug(responseString)
       })
   }
+
+  "passwordLogin" should "work with the correct credentials" in {
+    client.passwordLogin()
+  }
+
 }

@@ -1,24 +1,20 @@
 package sanskrit_coders.vedavaapi
 
-import java.net.URL
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
 import org.slf4j.{Logger, LoggerFactory}
 import sanskrit_coders.RichHttpClient
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
-import scala.util.{Failure, Success}
 import akka.http.scaladsl.model._
+// For the Domain specific language (DSL) used in parsing headers.
 import akka.http.scaladsl.model.headers._
 import org.json4s.DefaultFormats
 import org.json4s.native.Serialization
 
 import scala.io.BufferedSource
 
-//import akka.http.scaladsl.unmarshalling.Unmarshal
-import akka.stream.scaladsl.{Sink, Source}
 import akka.http.scaladsl.model.headers.HttpCookie
 import akka.stream.ActorMaterializer
 
